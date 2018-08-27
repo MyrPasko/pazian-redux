@@ -5,15 +5,14 @@ import User from "../components/User";
 import Page from "../components/Page";
 import * as pageActions from '../actions/PageActions';
 
-
 class App extends Component {
     render() {
         const {user, page} = this.props;
         const { setYear } = this.props.pageActions;
         return (
-            <div>
-                <User name={user.name}/>
+            <div className="row">
                 <Page year={page.year} photos={page.photos} setYear={setYear}/>
+                <User name={user.name}/>
             </div>
         );
     }
