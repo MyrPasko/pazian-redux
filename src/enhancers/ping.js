@@ -1,3 +1,8 @@
+
+
+/** Это нужно удалить, поскольку это самодельный логгер.
+ * Вместо этого я поставлю заводской Redux-Thunk (Санки) */
+
 export const ping = store => next => action => {
     console.log(`Action type: ${action.type}, addition action data: ${action.payload}`);
     return next(action)

@@ -8,10 +8,16 @@ import * as pageActions from '../actions/PageActions';
 class App extends Component {
     render() {
         const {user, page} = this.props;
-        const { setYear } = this.props.pageActions;
+        const { setYear, getPhotos } = this.props.pageActions;
         return (
             <div className="row">
-                <Page year={page.year} photos={page.photos} setYear={setYear}/>
+                <Page
+                    year={page.year}
+                    photos={page.photos}
+                    setYear={setYear}
+                    getPhotos={getPhotos}
+                    fetching={page.fetching}
+                />
                 <User name={user.name}/>
             </div>
         );
